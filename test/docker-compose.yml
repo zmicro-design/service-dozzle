@@ -1,0 +1,13 @@
+services:
+  dozzle:
+    restart: always
+    image: whatwewant/dozzle:${SERVICE_DOZZLE_IMAGE_VERSION}
+    environment:
+      PORT: $SERVICE_DOZZLE_PORT
+      USERNAME: ${SERVICE_DOZZLE_USERNAME}
+      PASSWORD: ${SERVICE_DOZZLE_PASSWORD}
+      
+networks:
+  default:
+    external: true
+    name: compose-ingress
