@@ -1,3 +1,3 @@
 NAME=dozzle
-VERSION=v0.0.2
+VERSION=v1.0.0
 DESCRIPTION="dozzle Service"
