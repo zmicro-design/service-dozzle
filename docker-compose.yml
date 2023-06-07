@@ -1,6 +1,14 @@
 services:
   dozzle:
     restart: always
+    image: whatwewant/connect-doreamon:v1
+    environment:
+      CLIENT_ID: ${SERVICE_DOZZLE_CLIENT_ID}
+      CLIENT_SECRET: ${SERVICE_DOZZLE_CLIENT_SECRET}
+      REDIRECT_URI: ${SERVICE_DOZZLE_REDIRECT_URI}
+
+  dozzle_upstream:
+    restart: always
     image: whatwewant/dozzle:${SERVICE_DOZZLE_IMAGE_VERSION}
     ports:
       - 0.0.0.0:${SERVICE_DOZZLE_PORT}:8080

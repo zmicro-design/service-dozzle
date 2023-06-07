@@ -11,6 +11,10 @@ check() {
   fi
 
   # service::config_set SERVICE_DOZZLE_PORT text "Port" 8024
+  
+  service::config_set SERVICE_DOZZLE_CLIENT_ID text "Client ID"
+  service::config_set SERVICE_DOZZLE_CLIENT_SECRET text "Client Secret"
+  service::config_set SERVICE_DOZZLE_REDIRECT_URI text "Redirect URI"
 }
 
 check $@
