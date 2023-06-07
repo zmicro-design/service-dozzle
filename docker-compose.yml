@@ -6,6 +6,7 @@ services:
       CLIENT_ID: ${SERVICE_DOZZLE_CLIENT_ID}
       CLIENT_SECRET: ${SERVICE_DOZZLE_CLIENT_SECRET}
       REDIRECT_URI: ${SERVICE_DOZZLE_REDIRECT_URI}
+      UPSTREAM: dozzle_upstream:8080
 
   dozzle_upstream:
     restart: always
